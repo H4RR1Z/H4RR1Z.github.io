@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffd3e0, #fff1f7);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .logo {
+    width: 120px;
+    margin: 20px 0;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .envelope {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #ff8fab;
+    border: 2px solid #e74c8c;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 1s ease;
+  }
+  
+  .envelope .flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100px;
+    background-color: #ffb6c1;
+    transform-origin: top;
+    transition: transform 1s ease;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    z-index: 2;
+  }
+  
+  .envelope .letter {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: white;
+    height: 160px;
+    border-radius: 4px;
+    z-index: 1;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #e74c8c;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 700px;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    animation: fadeIn 2s ease forwards;
+    opacity: 0;
+    z-index: 10;
+    overflow-y: auto;
+    max-height: 90vh;
+  }
+  
+  .message h1 {
+    color: #e91e63;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .message p {
+    font-size: 1.2em;
+    line-height: 1.7em;
+    color: #444;
+    white-space: pre-line;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
